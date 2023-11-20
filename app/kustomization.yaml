@@ -3,3 +3,4 @@ resources:
 - service.yaml
 - service1.yaml
 - route.yaml
+- httpd.yaml
