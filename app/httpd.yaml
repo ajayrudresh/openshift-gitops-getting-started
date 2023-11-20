@@ -21,6 +21,14 @@ spec:
           volumeMounts:
             - name: httpd
               mountPath: /tmp
+        - name: container1
+          image: image-registry.openshift-image-registry.svc:5000/openshift/httpd:latest
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          volumeMounts:
+            - name: httpd
+              mountPath: /tmp
       volumes:
         - name: httpd
           persistentVolumeClaim:
